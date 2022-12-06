@@ -1,0 +1,332 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'S-CoreDream-3Light';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'S-CoreDream-3Light';
+  position: relative;
+  overflow-x: hidden;
+  min-width: 900px;
+}
+
+/* ================= popup창 ===================== */
+div#popup {
+  width: 100vw;
+  height: 100%;
+  background-color: #333333d0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 200;
+}
+
+div.inner_box {
+  width: 500px;
+  height: 450px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px 0 #333333;
+  border-radius: 20px;
+  padding: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+div.inner_box img {
+  height: 100px;
+}
+
+div.inner_box a {
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 5px 10px;
+  background-color: #333333;
+  color: #fff;
+
+}
+
+div.today {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+}
+
+div.close {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+/* =============================================== header =========================================================== */
+header {
+  height: 50px;
+  display: flex;
+  position: sticky;
+  top: 0;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(165, 142, 176, 0.6);
+  padding: 0 1%;
+  z-index: 2;
+}
+
+header img {
+  width: 40px;
+  height: 40px;
+}
+
+header a {
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 7px;
+  font-size: 0.8em;
+  background-color: #333333;
+  color: #fff;
+}
+
+/* ================================================== main =================================================================== */
+/* ==============banner============== */
+.banner {
+  display: flex;
+  position: relative;
+}
+
+.banner_img {
+  width: 100%;
+}
+
+.banner_a {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+}
+
+/* ========== best point =========== */
+.bestpoint {
+  margin: 100px 0;
+  padding: 100px;
+}
+
+.bestpoint article,
+.besttop5 article {
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: 900;
+  gap: 20px;
+}
+
+article p {
+  text-align: center;
+}
+
+.detail {
+  font-size: 1.2rem;
+}
+
+.bestpoint ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.bestpoint ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.bestpoint ul li img {
+  width: 200px;
+  height: 200px;
+}
+
+.bestpoint ul li img+p:nth-of-type(1) {
+  margin: 50px 0;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+/* ============ besttop5 =============*/
+
+.besttop5 {
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(225, 195, 239, 0.6);
+}
+
+.besttab {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 20px;
+}
+
+.besttab li a {
+  border: 1px solid #4F355B;
+  border-radius: 20px;
+  padding: 10px;
+  font-weight: 800;
+}
+
+.besttab .selected {
+  background-color: #4F355B;
+  color: #fff;
+}
+
+.besttop5 .minititle {
+  margin-top: 30px;
+  font-size: 1.1rem;
+  font-weight: 900;
+  padding: 20px;
+}
+
+.minititle::after {
+  content: '';
+  display: flex;
+  width: 100%;
+  height: 1px;
+  background: #333;
+  margin: 8px 5px;
+}
+
+
+.best_contents>div {
+  display: none;
+}
+
+.best_contents ul {
+  padding-left: 30px;
+  gap: 20px;
+  display: flex;
+  overflow-x: auto;
+}
+
+.best_contents ul li {
+  width: 100%;
+}
+
+.best_contents ul img {
+  width: 200px;
+  height: 250px;
+}
+
+/* ============ faq ============== */
+.faq {
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+
+.faq .title {
+  font-size: 3rem;
+  font-weight: 900;
+  margin: 80px 0;
+}
+
+.faq ul li {
+  border: 1px solid #fff;
+  border-radius: 20px;
+  padding: 30px;
+  margin: 20px auto;
+  width: 800px;
+  background-color: rgba(225, 195, 239, 0.6);
+}
+
+.faq .detailall {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  cursor: pointer;
+}
+
+.faq .detailall .detail {
+  font-weight: 900;
+  display: block;
+}
+
+.faq .hidden .answer {
+  display: none;
+}
+
+.faq .answer::before {
+  content: '';
+  display: flex;
+  width: 100%;
+  height: 1px;
+  background: #333;
+  margin: 20px 0;
+}
+
+.faq ul li .answer {
+  margin-top: 20px;
+}
+
+/* ============ footer ============== */
+body footer {
+  width: 100%;
+  background-color: silver;
+  margin-top: 100px;
+  padding: 10px 5% 50px 0;
+  font-size: 14px;
+}
+
+/* =========== top button ========== */
+.scrollTop {
+  position: fixed;
+  right: 2%;
+  bottom: 2%;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  background-color: #4F355B;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: 900;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.show {
+  transition: all .5s;
+  opacity: .7;
+  visibility: visible;
+}
+
+.hover {
+  opacity: 1;
+  cursor: pointer;
+}
